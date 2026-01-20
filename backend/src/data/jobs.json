@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "Frontend Developer",
+    "company": "Google",
+    "location": "Remote",
+    "type": "Full-time",
+    "skills": ["React", "JavaScript", "CSS"],
+    "description": "Looking for a React developer with frontend experience.",
+    "postedAt": "2026-01-18",
+    "applyUrl": "https://careers.google.com"
+  },
+  {
+    "id": "2",
+    "title": "Node.js Developer",
+    "company": "Amazon",
+    "location": "Bangalore",
+    "type": "Full-time",
+    "skills": ["Node.js", "Express", "MongoDB"],
+    "description": "Backend role with Node.js and APIs.",
+    "postedAt": "2026-01-15",
+    "applyUrl": "https://amazon.jobs"
+  },
+  {
+    "id": "3",
+    "title": "Full Stack Engineer",
+    "company": "Microsoft",
+    "location": "Seattle",
+    "type": "Full-time",
+    "skills": ["React", "Node.js", "TypeScript"],
+    "description": "Full stack position working on cloud products.",
+    "postedAt": "2026-01-16",
+    "applyUrl": "https://careers.microsoft.com"
+  },
+  {
+    "id": "4",
+    "title": "DevOps Engineer",
+    "company": "Netflix",
+    "location": "Los Angeles",
+    "type": "Contract",
+    "skills": ["AWS", "Docker", "Kubernetes"],
+    "description": "Cloud infrastructure and deployment automation role.",
+    "postedAt": "2026-01-14",
+    "applyUrl": "https://netflix.com/jobs"
+  },
+  {
+    "id": "5",
+    "title": "Data Scientist",
+    "company": "Meta",
+    "location": "New York",
+    "type": "Full-time",
+    "skills": ["Python", "Machine Learning", "SQL"],
+    "description": "Analyze large datasets to drive product decisions.",
+    "postedAt": "2026-01-17",
+    "applyUrl": "https://careers.meta.com"
+  }
+]
