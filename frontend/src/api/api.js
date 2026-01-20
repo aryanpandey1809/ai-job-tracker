@@ -1,4 +1,4 @@
-const API = "http://localhost:4000";
+const API = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
 
 export const getJobs = () => fetch(`${API}/jobs`).then(r => r.json());
 export const uploadResume = (data) =>
