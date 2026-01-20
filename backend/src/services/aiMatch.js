@@ -1,10 +1,16 @@
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
-
 export async function scoreJob(resume, job) {
+  // Check if API key is available
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn('OpenAI API key not found, returning default score');
+    return { score: 0, reasons: ['API key not configured'] };
+  }
+  
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY
+  });
+  
   const prompt = `
 Resume:
 ${resume}

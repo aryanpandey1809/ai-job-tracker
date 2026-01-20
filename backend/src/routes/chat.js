@@ -8,10 +8,15 @@ const __dirname = path.dirname(__filename);
 const jobsPath = path.join(__dirname, '../data/jobs.json');
 const jobs = JSON.parse(fs.readFileSync(jobsPath, 'utf8'));
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 export default async function (app) {
   app.post("/chat", async (req) => {
+    // Check if API key is available
+    if (!process.env.OPENAI_API_KEY) {
+      return { reply: "AI service not configured. Please set OPENAI_API_KEY environment variable." };
+    }
+    
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    
     const { message } = req.body;
 
     const prompt = `
