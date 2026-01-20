@@ -9,7 +9,9 @@ import chatRoute from "./routes/chat.js";
 
 const app = Fastify();
 
-await app.register(cors);
+await app.register(cors, {
+  origin: true
+});
 await app.register(multipart);
 
 app.register(jobsRoute);
