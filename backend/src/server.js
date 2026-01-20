@@ -17,6 +17,12 @@ app.register(resumeRoute);
 app.register(applyRoute);
 app.register(chatRoute);
 
-app.listen({ port: 4000 }, () => {
-  console.log("Backend running on http://localhost:4000");
+const port = parseInt(process.env.PORT) || 4000;
+
+app.listen({ port }, (err) => {
+  if (err) {
+    app.log.error(err);
+    process.exit(1);
+  }
+  console.log(`Backend running on port ${port}`);
 });
